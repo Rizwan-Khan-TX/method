@@ -14,15 +14,14 @@ from config import (
 
 logger = logging.getLogger(__name__)
 
-
 # --------------------------------------------------
 # Load Transactions
 # --------------------------------------------------
 
 def load_transactions():
-    """
-    Load transactions CSV file into pandas DataFrame.
-    """
+    # --------------------------------------------------
+    # Load transactions CSV file into pandas DataFrame.
+    # --------------------------------------------------
 
     try:
         logger.info("Loading transactions data...")
@@ -37,16 +36,14 @@ def load_transactions():
         logger.error(f"Failed to load transactions file: {e}")
         raise
 
-
 # --------------------------------------------------
 # Load Store Metadata
 # --------------------------------------------------
 
 def load_store_metadata():
-    """
-    Load store metadata CSV file into pandas DataFrame.
-    """
-
+    # ----------------------------------------------------
+    # Load store metadata CSV file into pandas DataFrame.
+    # ----------------------------------------------------
     try:
         logger.info("Loading store metadata...")
 
@@ -60,16 +57,14 @@ def load_store_metadata():
         logger.error(f"Failed to load store metadata file: {e}")
         raise
 
-
-# --------------------------------------------------
+# -------------------------------------------------------------
 # Load Product Catalog
-# --------------------------------------------------
+# -------------------------------------------------------------
 
 def load_product_catalog():
-    """
-    Load nested JSON product catalog and flatten supplier fields.
-    """
-
+    # ------------------------------------------------------------- 
+    # Load nested JSON product catalog and flatten supplier fields.
+    # -------------------------------------------------------------
     try:
         logger.info("Loading product catalog...")
 
@@ -102,16 +97,14 @@ def load_product_catalog():
         logger.error(f"Failed to load product catalog file: {e}")
         raise
 
-
 # --------------------------------------------------
 # Master Ingestion Function
 # --------------------------------------------------
 
 def load_all_data():
-    """
-    Load all source datasets.
-    """
-
+    # --------------------------------------------------
+    # Load all source datasets.
+    # --------------------------------------------------
     transactions_df = load_transactions()
     stores_df = load_store_metadata()
     products_df = load_product_catalog()

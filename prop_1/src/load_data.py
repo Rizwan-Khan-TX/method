@@ -4,12 +4,10 @@ from config import connection_string
 
 logger = logging.getLogger(__name__)
 
-
 def load_to_sql_server(clean_df, quarantine_df, enriched_df):
-    """
-    Load datasets into SQL Server tables.
-    """
-
+    # --------------------------------------------------
+    # Load datasets into SQL Server tables.
+    # --------------------------------------------------
     logger.info("Connecting to SQL Server...")
 
     engine = create_engine(connection_string)

@@ -54,6 +54,7 @@ log_file = log_dir / "pipeline.log"
 critical_fields = [
     "store_id",
     "product_sku",
+    "quantity",
     "unit_price",
     "transaction_ts"
 ]

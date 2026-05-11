@@ -2,7 +2,7 @@ import sys
 import os
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-print(parent_dir)
+#print(parent_dir)
 sys.path.append(parent_dir)
 
 import logging
@@ -20,7 +20,6 @@ from ingest_data import load_all_data
 from tests.validate_data import validate_transactions
 from transform_data import transform_transactions
 from load_data import load_to_sql_server
-
 
 def main():
 
@@ -102,7 +101,6 @@ def main():
 
     logger.info(">>>>>>>>>>>>>> Retail data pipeline completed successfully >>>>>>>>>")
     logger.info("--END--")
-
 
 if __name__ == "__main__":
     main()
