@@ -1,3 +1,10 @@
+import sys
+import os
+
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+print(parent_dir)
+sys.path.append(parent_dir)
+
 import logging
 from pathlib import Path
 
@@ -10,7 +17,7 @@ from config import (
 
 from utils import setup_logging
 from ingest_data import load_all_data
-from validate_data import validate_transactions
+from tests.validate_data import validate_transactions
 from transform_data import transform_transactions
 from load_data import load_to_sql_server
 
@@ -23,9 +30,9 @@ def main():
 
     setup_logging()
 
-    logger = logging.getLogger(__name__)
-
-    logger.info("Starting retail data pipeline...")
+    logger = logging.getLogger("__name__")
+    logger.info("--START--")
+    logger.info(">>>>>>>>>>>>>> Starting retail data pipeline >>>>>>>>>>>>>>>>>>>>>>>")
 
     # --------------------------------------------------
     # Create Output Directory
@@ -81,7 +88,7 @@ def main():
         index=False
     )
 
-    logger.info("CSV outputs generated successfully.")
+    logger.info(">>>>>>>>>>>>>> CSV outputs generated successfully >>>>>>>>>>>>>>>>>>")
 
     # --------------------------------------------------
     # Load to SQL Server
@@ -93,7 +100,8 @@ def main():
         enriched_df
     )
 
-    logger.info("Retail data pipeline completed successfully.")
+    logger.info(">>>>>>>>>>>>>> Retail data pipeline completed successfully >>>>>>>>>")
+    logger.info("--END--")
 
 
 if __name__ == "__main__":

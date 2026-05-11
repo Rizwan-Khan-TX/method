@@ -1,5 +1,6 @@
 import logging
 import pandas as pd
+from config import critical_fields
 
 logger = logging.getLogger(__name__)
 
@@ -20,13 +21,6 @@ def validate_transactions(transactions_df, stores_df, products_df):
     # --------------------------------------------------
     # Null / Empty Checks
     # --------------------------------------------------
-
-    critical_fields = [
-        "store_id",
-        "product_sku",
-        "unit_price",
-        "transaction_ts"
-    ]
 
     for field in critical_fields:
 

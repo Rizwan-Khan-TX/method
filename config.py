@@ -1,12 +1,10 @@
 from pathlib import Path
 
-PYTHONDONTWRITEBYTECODE=1
-
 # --------------------------------------------------
 # Base Project Paths
 # --------------------------------------------------
 
-base_dir = Path(__file__).resolve().parent.parent
+base_dir = Path(__file__).resolve().parent
 
 data_dir = base_dir / "data"
 output_dir = base_dir / "output"
@@ -59,27 +57,3 @@ critical_fields = [
     "unit_price",
     "transaction_ts"
 ]
-
-#SQL Connection 
-srvr = "Riz-Music"
-db = "method"
-driver = "ODBC Driver 17 for SQL Server"
-
-conn_str = (
-    f"Driver={driver};"
-    f"Server={srvr};"
-    f"Database={db};"
-    "Trusted_Connection=yes;" # For Windows Authentication
-)
-#conn = pyodbc.connect(conn_str)
-#cursor = conn.cursor()
-#cursor.execute("SELECT Getdate();")
-#row = cursor.fetchone()
-#print(row[0])
-
-# critical_tests = [
-    # "store_id",
-    # "product_sku",
-    # "unit_price",
-    # "transaction_ts"
-# ]

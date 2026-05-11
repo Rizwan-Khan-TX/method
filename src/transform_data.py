@@ -3,7 +3,6 @@ import pandas as pd
 
 logger = logging.getLogger(__name__)
 
-
 def transform_transactions(clean_df, stores_df, products_df):
     """
     Join and enrich clean transaction data.
