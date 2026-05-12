@@ -1,13 +1,37 @@
 # Project Structure
 prop_1/
+│
 ├── data/
+│   ├── product_catalog.json
+│   ├── store_metadata.csv
+│   └── transactions.csv
+│
 ├── logs/
+│   └── readme.md (just a placeholder)
+│
 ├── output/
+│   ├── clean_transactions.csv
+│   ├── enriched_fact.csv
+│   ├── quarantine_transactions.csv
+│   └── readme.md (just a placeholder)
+│
+│
 ├── src/
+│   ├── ingest.py
+│   ├── load_data.py
+│   ├── pipeline.py
+│   ├── transform_data.py
+│   ├── utils.py
+│   └── validate.py
+│
 ├── tests/
-├── README.md
-├── DECISIONS.md
+│   └── test_pipeline.py
+│
+├── config.py
+├── decisons.md
+├── readme.md
 └── requirements.txt
+
 
 # Retail Data Pipeline Assessment
 ## Overview
