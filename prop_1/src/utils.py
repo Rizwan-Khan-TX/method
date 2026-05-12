@@ -2,10 +2,8 @@ import logging
 from pathlib import Path
 from config import log_dir, log_file
 
+# Configure application logging.
 def setup_logging():
-    # --------------------------------------------------
-    # Configure application logging.
-    # --------------------------------------------------
     Path(log_dir).mkdir(
         parents=True,
         exist_ok=True
