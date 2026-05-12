@@ -4,20 +4,12 @@ from config import connection_string
 
 logger = logging.getLogger(__name__)
 
-
+# Load datasets into SQL Server tables.
 def load_to_sql_server(clean_df, quarantine_df, enriched_df):
-    """
-    Load datasets into SQL Server tables.
-    """
-
     logger.info("Connecting to SQL Server...")
-
     engine = create_engine(connection_string)
-
     try:
-
         logger.info("Loading clean_transactions table...")
-
         clean_df.to_sql(
             "clean_transactions",
             engine,
@@ -26,7 +18,6 @@ def load_to_sql_server(clean_df, quarantine_df, enriched_df):
         )
 
         logger.info("Loading quarantine_transactions table...")
-
         quarantine_df.to_sql(
             "quarantine_transactions",
             engine,
@@ -35,7 +26,6 @@ def load_to_sql_server(clean_df, quarantine_df, enriched_df):
         )
 
         logger.info("Loading fact_transaction table...")
-
         enriched_df.to_sql(
             "fact_transaction",
             engine,
@@ -47,4 +37,5 @@ def load_to_sql_server(clean_df, quarantine_df, enriched_df):
 
     except Exception as e:
         logger.error(f"Failed loading data to SQL Server: {e}")
-        raise
+        raise  
+        
