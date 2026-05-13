@@ -45,6 +45,7 @@ prop_1/
 ├── decisons.md
 ├── readme.md
 └── requirements.txt
+<img width="1166" height="942" alt="image" src="https://github.com/user-attachments/assets/4fd8c354-9197-4722-90aa-65d95802c7cc" />
 
 # requirements
 please review requirements.txt to setup your instance, import required libraries & install RDBMS
