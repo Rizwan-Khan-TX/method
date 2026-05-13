@@ -5,7 +5,7 @@ from config import connection_string
 logger = logging.getLogger(__name__)
 
 # Load datasets into SQL Server tables.
-def load_to_sql_server(clean_df, quarantine_df, enriched_df):
+def load_transaction_df(clean_df, quarantine_df, enriched_df):
     logger.info("Connecting to SQL Server...")
     engine = create_engine(connection_string)
     try:
@@ -25,9 +25,9 @@ def load_to_sql_server(clean_df, quarantine_df, enriched_df):
             index=False
         )
 
-        logger.info("Loading fact_transaction table...")
+        logger.info("Loading dm_transaction table...")
         enriched_df.to_sql(
-            "fact_transaction",
+            "dm_transaction",
             engine,
             if_exists="replace",
             index=False
@@ -38,4 +38,21 @@ def load_to_sql_server(clean_df, quarantine_df, enriched_df):
     except Exception as e:
         logger.error(f"Failed loading data to SQL Server: {e}")
         raise  
-        
+
+def load_raw_df(raw_df,tbl_name):
+    logger.info(f"Connecting to SQL Server for :  {tbl_name}...")
+    engine = create_engine(connection_string)
+    try:
+        logger.info(f"Loading raw : {tbl_name}")
+        raw_df.to_sql(
+            tbl_name,
+            engine,
+            if_exists="replace",
+            index=False
+        )
+
+        logger.info(f"Load for :  {tbl_name} completed...")
+
+    except Exception as e:
+        logger.error(f"Load failed for : {tbl_name} Server: {e}")
+        raise  

@@ -41,20 +41,20 @@ def validate_transactions(transactions_df, stores_df, products_df):
         quarantine_frames.append(invalid_store_df)
 
     # Invalid Product SKU
-    valid_skus = set(products_df["sku"])
+    valid_skus = set(products_df["product_sku"])
     invalid_product_df = working_df[~working_df["product_sku"].isin(valid_skus)].copy()
     if not invalid_product_df.empty:
         invalid_product_df["dq_reason"] = "INVALID_PRODUCT_SKU"
         quarantine_frames.append(invalid_product_df)
 
     # Negative Quantity
-    negative_qty_df = working_df[working_df["quantity"] <= 0].copy()
+    negative_qty_df = working_df[working_df["transaction_quantity"] <= 0].copy()
     if not negative_qty_df.empty:
         negative_qty_df["dq_reason"] = "INVALID_QUANTITY"
         quarantine_frames.append(negative_qty_df)
 
     # Negative Unit Price
-    negative_price_df = working_df[working_df["unit_price"] <= 0].copy()
+    negative_price_df = working_df[working_df["transaction_unit_price"] <= 0].copy()
     if not negative_price_df.empty:
         negative_price_df["dq_reason"] = "INVALID_UNIT_PRICE"
         quarantine_frames.append(negative_price_df)

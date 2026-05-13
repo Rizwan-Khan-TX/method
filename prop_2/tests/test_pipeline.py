@@ -53,7 +53,7 @@ def test_no_nulls_in_clean_data():
     critical_fields = [
         "transaction_id",
         "store_id",
-        "unit_price"
+        "transaction_unit_price"
     ]
 
     for field in critical_fields:
@@ -66,12 +66,12 @@ def test_no_nulls_in_clean_data():
 def test_total_amount_calculation():
 
     calculated_total = (
-        enriched_df["quantity"] *
-        enriched_df["unit_price"]
+        enriched_df["transaction_quantity"] *
+        enriched_df["transaction_unit_price"]
     )
 
     assert (
-        enriched_df["total_amount"] ==
+        enriched_df["transaction_total_amount"] ==
         calculated_total
     ).all()
 

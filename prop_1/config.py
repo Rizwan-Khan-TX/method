@@ -24,7 +24,7 @@ store_metadata_file = data_dir / "store_metadata.csv"
 
 clean_transactions_file = output_dir / "clean_transactions.csv"
 quarantine_file = output_dir / "quarantine_transactions.csv"
-fact_transaction_file = output_dir / "fact_transaction.csv"
+dm_transaction_file = output_dir / "dm_transaction.csv"
 
 # --------------------------------------------------
 # SQL Server Configuration
@@ -54,7 +54,7 @@ log_file = log_dir / "pipeline.log"
 critical_fields = [
     "store_id",
     "product_sku",
-    "quantity",
-    "unit_price",
+    "transaction_quantity",
+    "transaction_unit_price",
     "transaction_ts"
 ]

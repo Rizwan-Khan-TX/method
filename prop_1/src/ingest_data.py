@@ -46,9 +46,9 @@ def load_product_catalog():
         flattened_products = []
         for product in products:
             flattened_product = {
-                "sku": product.get("sku"),
+                "product_sku": product.get("sku"),
                 "product_name": product.get("product_name"),
-                "category": product.get("category"),
+                "product_category": product.get("category"),
                 "supplier_id": product.get("supplier", {}).get("id"),
                 "supplier_name": product.get("supplier", {}).get("name"),
                 "supplier_country": product.get("supplier", {}).get("country")
@@ -66,6 +66,12 @@ def load_product_catalog():
 # Load all source datasets.
 def load_all_data():
     transactions_df = load_transactions()
+    # rename columns 
+    transactions_df = transactions_df.rename(columns={"quantity": "transaction_quantity", "unit_price": "transaction_unit_price", "region": "transaction_region"})
+    
     stores_df = load_store_metadata()
+    # rename columns 
+    stores_df = stores_df.rename(columns={"city": "store_city", "state": "store_state", "opened_date": "store_opened_date"})
+    
     products_df = load_product_catalog()
     return transactions_df, stores_df, products_df

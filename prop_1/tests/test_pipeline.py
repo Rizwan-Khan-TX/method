@@ -33,17 +33,16 @@ enriched_df = transform_transactions(
 
 # Test 1
 # transactions count validation
-def test_transactions_counts():
+def test_row_counts():
 
-    distinct_transactions = transactions_df['transaction_id'].nunique()
-    distinct_cleaned_transactions = clean_df['transaction_id'].nunique()
-    distinct_quarantine_transactions = quarantine_df['transaction_id'].nunique()
-    total_output_transactions = (
-        distinct_cleaned_transactions +
-        distinct_quarantine_transactions
+    total_input_rows = len(transactions_df)
+
+    total_output_rows = (
+        len(clean_df) +
+        len(quarantine_df)
     )
 
-    assert distinct_transactions == total_output_transactions
+    assert total_input_rows == total_output_rows
 
 
 # Test 2
@@ -53,7 +52,7 @@ def test_no_nulls_in_clean_data():
     critical_fields = [
         "transaction_id",
         "store_id",
-        "unit_price"
+        "transaction_unit_price"
     ]
 
     for field in critical_fields:
@@ -66,12 +65,12 @@ def test_no_nulls_in_clean_data():
 def test_total_amount_calculation():
 
     calculated_total = (
-        enriched_df["quantity"] *
-        enriched_df["unit_price"]
+        enriched_df["transaction_quantity"] *
+        enriched_df["transaction_unit_price"]
     )
 
     assert (
-        enriched_df["total_amount"] ==
+        enriched_df["transaction_total_amount"] ==
         calculated_total
     ).all()
 

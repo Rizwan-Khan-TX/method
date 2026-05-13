@@ -12,7 +12,7 @@ prop_1/
 │
 ├── output/
 │   ├── clean_transactions.csv
-│   ├── enriched_fact.csv
+│   ├── dm_transaction.csv
 │   ├── quarantine_transactions.csv
 │   └── readme.md (just a placeholder)
 │
