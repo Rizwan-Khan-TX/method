@@ -19,14 +19,14 @@ def transform_transactions(clean_df, stores_df, products_df):
     enriched_df = enriched_df.merge(
         products_df,
         left_on="product_sku",
-        right_on="sku",
+        right_on="product_sku",
         how="left"
     )
 
     # Derived Columns
-    enriched_df["total_amount"] = (
-        enriched_df["quantity"] *
-        enriched_df["unit_price"]
+    enriched_df["transaction_total_amount"] = (
+        enriched_df["transaction_quantity"] *
+        enriched_df["transaction_unit_price"]
     )
 
     enriched_df["transaction_date"] = pd.to_datetime(enriched_df["transaction_ts"]).dt.date
@@ -35,16 +35,21 @@ def transform_transactions(clean_df, stores_df, products_df):
     final_df = enriched_df[
         [
             "transaction_id",
+            "store_id",
             "store_name",
-            "city",
-            "state",
-            "region",
+            "store_city",
+            "store_state",
+            "store_opened_date",
+            "product_sku",
             "product_name",
-            "category",
+            "product_category",
+            "supplier_id",
+            "supplier_name",
             "supplier_country",
-            "quantity",
-            "unit_price",
-            "total_amount",
+            "transaction_quantity",
+            "transaction_unit_price",
+            "transaction_region",
+            "transaction_total_amount",
             "transaction_date"
         ]
     ]

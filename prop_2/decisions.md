@@ -2,6 +2,7 @@
 # Design Decisions and Trade-Offs
 
 ## 1. Chose pandas over Spark or distributed frameworks
+## 2. I also enhanced original design and added a Kimball style data warehouse, assuming CDC data, with soft deletes and SCD2 approach
 
 The provided datasets were relatively small (~500 transaction rows), so pandas provided a lightweight and highly readable implementation without introducing unnecessary infrastructure complexity.
 

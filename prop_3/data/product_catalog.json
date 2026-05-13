@@ -1,0 +1,502 @@
+[
+  {
+    "sku": "SKU0001",
+    "product_name": "Product SKU0001",
+    "category": "Apparel",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0002",
+    "product_name": "Product SKU0002",
+    "category": "toys",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0003",
+    "product_name": "Product SKU0003",
+    "category": "Apparel",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0004",
+    "product_name": null,
+    "category": "toys",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0005",
+    "product_name": "Product SKU0005",
+    "category": "Home & Kitchen",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0006",
+    "product_name": "Product SKU0006",
+    "category": "electronics",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0007",
+    "product_name": "Product SKU0007",
+    "category": "sports",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0008",
+    "product_name": "Product SKU0008",
+    "category": "Apparel",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0009",
+    "product_name": "Product SKU0009",
+    "category": "Home & Kitchen",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0010",
+    "product_name": "Product SKU0010",
+    "category": "ELECTRONICS",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0011",
+    "product_name": "Product SKU0011",
+    "category": "ELECTRONICS",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0012",
+    "product_name": null,
+    "category": "Toys",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0013",
+    "product_name": "Product SKU0013",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0014",
+    "product_name": "Product SKU0014",
+    "category": "Toys",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0015",
+    "product_name": "Product SKU0015",
+    "category": "Home & Kitchen",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0016",
+    "product_name": "Product SKU0016",
+    "category": "Home & Kitchen",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0017",
+    "product_name": "Product SKU0017",
+    "category": "Apparel",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0018",
+    "product_name": "Product SKU0018",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0019",
+    "product_name": "Product SKU0019",
+    "category": "electronics",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0020",
+    "product_name": "Product SKU0020",
+    "category": "electronics",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0021",
+    "product_name": "Product SKU0021",
+    "category": "SPORTS",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0022",
+    "product_name": "Product SKU0022",
+    "category": "toys",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0023",
+    "product_name": null,
+    "category": "sports",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0024",
+    "product_name": "Product SKU0024",
+    "category": "Home & Kitchen",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0025",
+    "product_name": "Product SKU0025",
+    "category": "sports",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0026",
+    "product_name": "Product SKU0026",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0027",
+    "product_name": "Product SKU0027",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0028",
+    "product_name": "Product SKU0028",
+    "category": "SPORTS",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0029",
+    "product_name": "Product SKU0029",
+    "category": "SPORTS",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0030",
+    "product_name": "Product SKU0030",
+    "category": "toys",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0031",
+    "product_name": "Product SKU0031",
+    "category": "toys",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0032",
+    "product_name": "Product SKU0032",
+    "category": "electronics",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0033",
+    "product_name": "Product SKU0033",
+    "category": "Home & Kitchen",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0034",
+    "product_name": null,
+    "category": "home & kitchen",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0035",
+    "product_name": "Product SKU0035",
+    "category": "Toys",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0036",
+    "product_name": "Product SKU0036",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0037",
+    "product_name": "Product SKU0037",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0038",
+    "product_name": "Product SKU0038",
+    "category": "SPORTS",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0039",
+    "product_name": "Product SKU0039",
+    "category": "SPORTS",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0040",
+    "product_name": "Product SKU0040",
+    "category": "sports",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0041",
+    "product_name": "Product SKU0041",
+    "category": "ELECTRONICS",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0042",
+    "product_name": "Product SKU0042",
+    "category": "toys",
+    "supplier": {
+      "id": "SUP002",
+      "name": "EuroGoods",
+      "country": "Germany"
+    }
+  },
+  {
+    "sku": "SKU0043",
+    "product_name": "Product SKU0043",
+    "category": "Sports",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0044",
+    "product_name": "Product SKU0044",
+    "category": "Electronics",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0045",
+    "product_name": null,
+    "category": "APPAREL",
+    "supplier": {
+      "id": "SUP004",
+      "name": "NorthTrade",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0046",
+    "product_name": "Product SKU0046",
+    "category": "Electronics",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0047",
+    "product_name": "Product SKU0047",
+    "category": "APPAREL",
+    "supplier": {
+      "id": "SUP003",
+      "name": "AsiaPac",
+      "country": null
+    }
+  },
+  {
+    "sku": "SKU0048",
+    "product_name": "Product SKU0048",
+    "category": "Apparel",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  },
+  {
+    "sku": "SKU0049",
+    "product_name": "Product SKU0049",
+    "category": "Apparel",
+    "supplier": {
+      "id": "SUP005",
+      "name": "SouthBridge",
+      "country": "Brazil"
+    }
+  },
+  {
+    "sku": "SKU0050",
+    "product_name": "Product SKU0050",
+    "category": "electronics",
+    "supplier": {
+      "id": "SUP001",
+      "name": "GlobalTech",
+      "country": ""
+    }
+  }
+]

@@ -12,9 +12,12 @@ prop_1/
 │
 ├── output/
 │   ├── clean_transactions.csv
-│   ├── enriched_fact.csv
+│   ├── dm_transaction.csv
 │   ├── quarantine_transactions.csv
 │   └── readme.md (just a placeholder)
+│
+├── sql/
+│   ├── data_analysis.sql
 │
 ├── src/
 │   ├── ingest.py
@@ -33,7 +36,7 @@ prop_1/
 └── requirements.txt
 
 # requirements
-please review requirements.txt to setup your instance, import required libraries/RDBMS
+please review requirements.txt to setup your instance, import required libraries & install RDBMS
 
 # Run pipeline from root
 python src\pipeline.py
@@ -96,6 +99,9 @@ Transformation Layer
     │
     ▼
 SQL Server Serving Layer
+    │
+    ▼
+SQL Scripts for Analysis	
 
 ```
 

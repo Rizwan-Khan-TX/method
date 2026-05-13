@@ -12,14 +12,14 @@ from config import (
     output_dir,
     clean_transactions_file,
     quarantine_file,
-    fact_transaction_file
+    dm_transaction_file
 )
 
 from utils import setup_logging
 from ingest_data import load_all_data
 from validate_data import validate_transactions
 from transform_data import transform_transactions
-from load_data import load_to_sql_server
+from load_data import load_transaction_df,load_raw_df
 
 def main():
     # Logging Setup
@@ -62,17 +62,32 @@ def main():
         index=False
     )
     enriched_df.to_csv(
-        fact_transaction_file,
+        dm_transaction_file,
         index=False
     )
 
     logger.info(">>>>>>>>>>>>>> CSV outputs generated successfully >>>>>>>>>>>>>>>>>>")
 
     # Now load dfs to SQL Server
-    load_to_sql_server(
+    load_transaction_df(
         clean_df,
         quarantine_df,
         enriched_df
+    )
+
+    load_raw_df(
+        stores_df,
+        'stg_stores_raw'
+    )
+    
+    load_raw_df(
+        products_df,
+        'stg_products_raw'
+    )
+    
+    load_raw_df(
+        transactions_df,
+        'stg_transactions_raw'
     )
 
     logger.info(">>>>>>>>>>>>>> Retail data pipeline completed successfully >>>>>>>>>")
