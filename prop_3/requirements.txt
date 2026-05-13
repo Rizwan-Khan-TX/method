@@ -1,0 +1,14 @@
+Following Python Libraries are needed for this project
+*	json
+*	logging
+*	os
+*	pandas
+*	pathlib
+*	sqlalchemy
+*	sys
+
+For RDBMS we used
+*	Microsoft SQL Server 2025 (RTM) - 17.0.1000.7 (X64) 
+*	Oct 21 2025 12:05:57 
+*	Copyright (C) 2025 Microsoft Corporation
+*	Enterprise Developer Edition (64-bit) on Windows 10 Home 10.0 <X64> (Build 26200: ) (Hypervisor)

@@ -1,0 +1,31 @@
+store_id,store_name,city,state,opened_date
+STR001,Los Angeles Store #1,Los Angeles,CA,1/31/2018
+STR002,Miami Store #2,Miami,FL,7/25/2016
+STR003,San Diego Store #3,,CA,2/11/2021
+STR004,San Diego Store #4,San Diego,CA,9/25/2019
+STR005,New York Store #5,New York,NY,1/19/2016
+STR006,Miami Store #6,,FL,8/31/2020
+STR007,Newark Store #7,Newark,NJ,4/17/2021
+STR008,Tampa Store #8,Tampa,FL,2/10/2021
+STR009,Atlanta Store #9,Atlanta,GA,1/14/2020
+STR010,Jersey City Store #10,,NJ,1/27/2015
+STR011,Austin Store #11,Austin,TX,9/28/2019
+STR012,Spokane Store #12,Spokane,WA,9/28/2016
+STR013,Orlando Store #13,Orlando,FL,2/23/2016
+STR014,San Francisco Store #14,San Francisco,CA,2/1/2016
+STR015,Spokane Store #15,Spokane,,10/8/2021
+STR016,Chicago Store #16,Chicago,IL,2/25/2020
+STR017,Charlotte Store #17,Charlotte,NC,3/31/2019
+STR018,San Diego Store #18,San Diego,CA,4/15/2018
+STR019,Jersey City Store #19,Jersey City,NJ,6/22/2021
+STR020,Tampa Store #20,Tampa,FL,10/12/2015
+STR021,Albany Store #21,Albany,,7/22/2017
+STR022,Chicago Store #22,Chicago,IL,8/11/2017
+STR023,San Francisco Store #23,San Francisco,CA,2/12/2018
+STR024,Cincinnati Store #24,Cincinnati,OH,2/3/2019
+STR025,Dallas Store #25,Dallas,TX,12/26/2018
+STR026,Tampa Store #26,Tampa,FL,12/29/2017
+STR027,San Diego Store #27,San Diego,CA,12/1/2016
+STR028,Durham Store #28,Durham,NC,9/29/2017
+STR029,Dallas Store #29,Dallas,TX,4/4/2019
+STR030,Rockford Store #30,Rockford,IL,3/31/2021
