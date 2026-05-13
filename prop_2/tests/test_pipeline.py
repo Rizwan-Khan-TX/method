@@ -33,17 +33,16 @@ enriched_df = transform_transactions(
 
 # Test 1
 # transactions count validation
-def test_transactions_counts():
+def test_row_counts():
 
-    distinct_transactions = transactions_df['transaction_id'].nunique()
-    distinct_cleaned_transactions = clean_df['transaction_id'].nunique()
-    distinct_quarantine_transactions = quarantine_df['transaction_id'].nunique()
-    total_output_transactions = (
-        distinct_cleaned_transactions +
-        distinct_quarantine_transactions
+    total_input_rows = len(transactions_df)
+
+    total_output_rows = (
+        len(clean_df) +
+        len(quarantine_df)
     )
 
-    assert distinct_transactions == total_output_transactions
+    assert total_input_rows == total_output_rows
 
 
 # Test 2

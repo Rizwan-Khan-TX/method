@@ -9,13 +9,6 @@ prop_1/
 │
 ├── logs/
 │   └── readme.md (just a placeholder)
-│
-├── output/
-│   ├── clean_transactions.csv
-│   ├── dm_transaction.csv
-│   ├── quarantine_transactions.csv
-│   └── readme.md (just a placeholder)
-│
 ├── sql/
 │   ├──procs
 │      ├── load_dim_product.sql
@@ -29,18 +22,10 @@ prop_1/
 │      ├── dim_supplier.sql
 │      ├── fact_transaction.sql
 │      ├── lkup_date.sql
-│
-├── src/
-│   ├── ingest.py
-│   ├── load_data.py
-│   ├── pipeline.py
-│   ├── transform_data.py
-│   ├── utils.py
-│   └── validate.py
-│
-├── tests/
-│   └── test_pipeline.py
-│
+│   ├──baddata.sql
+│   ├──data_analysis.sql
+│   ├──dynamic.sql
+│	
 ├── config.py
 ├── decisons.md
 ├── readme.md
@@ -48,9 +33,6 @@ prop_1/
 
 # requirements
 please review requirements.txt to setup your instance, import required libraries & install RDBMS
-
-# Run pipeline from root
-python src\pipeline.py
 
 # Create SQL tables DB
 	execute scripts in `sql\tables` folder on DB {couldnt automate due to time constraints}
@@ -60,9 +42,6 @@ python src\pipeline.py
 	`exec dw.load_dim_supplier;`
 	`exec dw.load_dim_product;`
 	`exec dw.load_fact_transaction;`
-
-# Run tests from root
-python -m pytest
 
 # Retail Data Pipeline Assessment
 ## Overview
@@ -77,12 +56,9 @@ The pipeline processes the following source datasets:
 
 The solution was intentionally designed using a modular layered approach to separate:
 
-1. Ingestion
-2. Data quality validation
-3. Transformation/enrichment
-4. Analytical serving
-5. load raw data in SQL server
-6. create DW (dim/facts) along with SCD2 and soft delete approach
+1. Ingestion (linked file approach)
+2. load raw data in SQL server
+3. create DW (dim/facts) along with SCD2 and soft delete approach
 	i. did not reject any records, instead provided `dq_reason` in fact table for DAs to make a call on record usage instead of deciding for them
 	ii. in real world I would not create dq_reason column, but instead create a `bitwise` approach with a lkup table to provide text for dq_reason
 
@@ -103,30 +79,15 @@ Source Files
     │
     ▼
 Ingestion Layer
-(pandas loaders)
+(dynamic.sql)
     │
-    ▼
-Validation Layer
-- null checks
-- duplicate checks
-- timestamp validation
-- referential integrity checks
-- anomaly detection
     │
- ┌──┴──────────────┐──────────────────────┐
- ▼                 ▼                      ▼  
-Clean Data     Quarantine Data         RAW Data
-    │			   │					  │	
-	│			   │                      │
-	│			   ▼                      ▼                      
-	│          SQL Server             SQL Server(DW)
-	│
-    ▼
-Transformation Layer
-(join + enrichment)
+    ▼  
+  RAW Data
+    │	
     │
-    ▼
-SQL Server Serving Layer
+    ▼                      
+SQL Server(DW)
     │
     ▼
 SQL Scripts for Analysis	
